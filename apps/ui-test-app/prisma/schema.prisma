@@ -6,3 +6,10 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model MainTestInformation {
+  createdAt DateTime @default(now())
+  host      String?
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
